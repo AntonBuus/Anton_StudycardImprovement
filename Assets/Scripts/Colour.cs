@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Colour : MonoBehaviour
 {
-    SpriteRenderer sandwich;
+    SpriteRenderer colorReader;
  
     void Start()
     {
-        sandwich = GetComponent<SpriteRenderer>();
-        sandwich.color = Color.HSVToRGB(0.4f, 1, 1);
+        colorReader = GetComponent<SpriteRenderer>();
+        colorReader.color = Color.HSVToRGB(0.4f, 1, 1);
     }
 
     private void Update()
     {
-        float Gyromums = GetComponent<GyroData>().GetGyro();
-        Gyromums = Mathf.Abs(Gyromums);
+        float GyroOutput = GetComponent<GyroData>().GetGyro();
+        GyroOutput = Mathf.Abs(GyroOutput);
 
-            sandwich.color = Color.HSVToRGB(Gyromums % 1 + 0.2f, 0.85f, 0.7f); 
+            colorReader.color = Color.HSVToRGB(GyroOutput % 1 + 0.2f, 0.85f, 0.7f); 
     }
 }
