@@ -30,23 +30,6 @@ public class NFCNew : MonoBehaviour
 	//public GameObject popupobjects;
 	public Text idText;
 
-	//public static NFCNew instance;
-	/*void Awake()
-	{
-		if (instance == null)
-		{
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-		else
-		{
-			Destroy(gameObject);
-		}
-
-	}
-	*/
-	
-	
 
 	void Start()
 	{
@@ -60,9 +43,7 @@ public class NFCNew : MonoBehaviour
 			tag_output_text.text = tagFound.ToString();
 			if (!tagFound) //remove
 			{
-				if (Key)
-
-					
+				if (Key)	
 				{
 					// Create new NFC Android object
 					mActivity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity"); // Activities open apps

@@ -8,7 +8,7 @@ public class GyroData : MonoBehaviour
 {
 
     private bool gyroEnabled;
-    float Gyromums;
+    float GyroOutput;
     //public Text Data;
     Vector2 gyrovector;
 
@@ -36,7 +36,7 @@ public class GyroData : MonoBehaviour
         float y = (float)value.y;
         //gyrovector = new Vector2(x, y);
 
-        Gyromums = (x + y) * 4;
+        GyroOutput = (x + y) * 4;
 
 
 
@@ -50,7 +50,7 @@ public class GyroData : MonoBehaviour
     public float GetGyro()
 
     {
-        return Gyromums;
+        return GyroOutput;
     }
 
 }
