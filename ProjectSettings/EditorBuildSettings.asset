@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ADGANG.unity
     guid: 9cf1492d61af6084f8a87e125d687138
   - enabled: 1
-    path: Assets/Scenes/KONTO.unity
+    path: Assets/Scenes/Konto.unity
     guid: f7cc64e9bfb103d449281fa8ac9b56e6
   - enabled: 1
     path: Assets/Scenes/NOTIFIKATION.unity
