@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class Colour : MonoBehaviour
 {
-
-    SpriteRenderer renderer;
-
-
-
-    private void OnJointBreak(float breakForce)
-    {
-        
-    }
-    
+    SpriteRenderer sandwich;
+ 
     void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
-        renderer.color = Color.HSVToRGB(0.4f, 1, 1);
+        sandwich = GetComponent<SpriteRenderer>();
+        sandwich.color = Color.HSVToRGB(0.4f, 1, 1);
     }
 
     private void Update()
     {
-
         float Gyromums = GetComponent<GyroData>().GetGyro();
         Gyromums = Mathf.Abs(Gyromums);
-        
-            renderer.color = Color.HSVToRGB(Gyromums % 1 + 0.2f, 0.85f, 0.7f); 
+
+            sandwich.color = Color.HSVToRGB(Gyromums % 1 + 0.2f, 0.85f, 0.7f); 
     }
-
-
 }
